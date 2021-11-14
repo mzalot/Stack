@@ -59,4 +59,16 @@ public class Stack <T>{
         //number of nodes in stack
         return counter;
     }
+
+    //peek method
+    public StackNode peek(){
+        //find the last node in the stack
+        StackNode currentNode = node;
+        //go to last element
+        for(int i = 0; i < counter; i++){
+            currentNode = currentNode.getNode2();
+        }
+        //return the last node(most recently added)
+        return (StackNode)currentNode;
+    }
 }
