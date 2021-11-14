@@ -17,6 +17,8 @@ public class Stack <T>{
         node = new StackNode();
     }
     //methods
+
+    //push method
     public void push(T data){
         //find the last node in the stack
         StackNode currentNode = node;
@@ -29,5 +31,19 @@ public class Stack <T>{
         addNode.setNode1(currentNode);
         //add to counter of nodes
         counter++;
+    }
+
+    //pop method
+    public StackNode pop(){
+        //stack node to store last added node
+        StackNode currentNode = node;
+        //go to last added node
+        for(int i = 0; i < counter; i++){
+            currentNode = currentNode.getNode1();
+        }
+        //remove current node through reducing the counter
+        counter--;
+        //return removed node
+        return (StackNode)currentNode;
     }
 }
