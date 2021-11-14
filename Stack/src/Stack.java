@@ -23,7 +23,7 @@ public class Stack <T>{
         //find the last node in the stack
         StackNode currentNode = node;
         //go to last element
-        for(int i = 0; i < counter; i++){
+        for(int i = 0; i < counter-1; i++){
             currentNode = currentNode.getNode2();
         }
         //create a new node and add it to the end of the stack
@@ -39,7 +39,7 @@ public class Stack <T>{
         StackNode currentNode = node;
         //go to last added node
         for(int i = 0; i < counter; i++){
-            currentNode = currentNode.getNode1();
+            currentNode = currentNode.getNode2();
         }
         //remove current node through reducing the counter
         counter--;
@@ -50,7 +50,7 @@ public class Stack <T>{
     //isEmpty method
     public boolean isEmpty(){
         //is there nothing in the stack
-        boolean b = counter == 0;
+        boolean b = (counter == 0);
         return b;
     }
 
