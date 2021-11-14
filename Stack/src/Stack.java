@@ -9,7 +9,7 @@
 public class Stack <T>{
     //instance data
     private int counter;
-    StackNode node;
+    private StackNode node;
 
     //default constructor
     public Stack(){
