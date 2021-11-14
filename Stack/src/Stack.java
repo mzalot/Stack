@@ -46,4 +46,17 @@ public class Stack <T>{
         //return removed node
         return (StackNode)currentNode;
     }
+
+    //isEmpty method
+    public boolean isEmpty(){
+        //is there nothing in the stack
+        boolean b = counter == 0;
+        return b;
+    }
+
+    //size method
+    public int size(){
+        //number of nodes in stack
+        return counter;
+    }
 }
