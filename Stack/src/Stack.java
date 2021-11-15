@@ -23,12 +23,12 @@ public class Stack <T>{
         //find the last node in the stack
         StackNode currentNode = node;
         //go to last element
-        for(int i = 0; i < counter-1; i++){
+        for(int i = 0; i < counter; i++){
             currentNode = currentNode.getNode2();
         }
         //create a new node and add it to the end of the stack
         StackNode addNode = new StackNode(data);
-        addNode.setNode1(currentNode);
+        currentNode.setNode2(addNode);
         //add to counter of nodes
         counter++;
     }

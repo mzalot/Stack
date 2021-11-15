@@ -70,6 +70,10 @@ public class StackNode <T>{
 
     //toString method
     public String toString(){
+        //check if value is null
+        if(value == null){
+            return "Node: null";
+        }
         return "Node: " + value.toString();
     }
 
